@@ -6,6 +6,7 @@ ARG BUSYBOX_VERSION=1.34.1
 ARG SUPERVISOR_VERSION=4.2.4
 
 RUN apt-get update
+RUN apt-get -y install libnss-resolve
 RUN apt-get -y install apt-utils
 RUN apt-get -y install build-essential curl git python3 python3-pip golang shellcheck
 
